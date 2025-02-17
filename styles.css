@@ -1,7 +1,3 @@
-/* * {
-  background-color: #fff2c2;
-} */
-
 /* Base font settings */
 body {
   font-family: "EB Garamond", serif;
@@ -17,7 +13,6 @@ body {
   padding: 20px;
 }
 
-/* Add heading styles with different font weights */
 h1,
 h2,
 h3 {
