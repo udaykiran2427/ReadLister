@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadLister</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main container for our app -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for books..." />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="book-tracker">
+      <header>
+        <h1>ReadLister</h1>
+        <button id="addBookBtn">Add New Book</button>
+      </header>
+
+      <!-- Book collections -->
+      <div class="collections">
+        <section class="book-shelf">
+          <h2>Currently Reading</h2>
+          <div id="reading" class="book-list"></div>
+        </section>
+
+        <section class="book-shelf">
+          <h2>Want to Read</h2>
+          <div id="wantToRead" class="book-list"></div>
+        </section>
+
+        <section class="book-shelf">
+          <h2>Already Read</h2>
+          <div id="read" class="book-list"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Modal for adding new books -->
+    <div id="addBookModal" class="modal">
+      <div class="modal-content">
+        <h2>Add New Book</h2>
+        <form id="addBookForm">
+          <input type="text" id="bookTitle" placeholder="Book Title" required />
+          <input type="text" id="bookAuthor" placeholder="Author" required />
+          <input type="text" id="bookCover" placeholder="Cover Image URL" />
+          <select id="bookStatus">
+            <option value="reading">Currently Reading</option>
+            <option value="wantToRead">Want to Read</option>
+            <option value="read">Already Read</option>
+          </select>
+          <button type="submit">Add Book</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
